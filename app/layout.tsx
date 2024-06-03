@@ -183,7 +183,7 @@ export default function RootLayout({
                         href="https://uifry.com/"
                         variant="flat"
                       >
-                        Download
+                        Subscribe
                       </Button>
                     </div>
                   </div>
