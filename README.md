@@ -1,8 +1,7 @@
-# Next.js & NextUI Template
+# Assignment: Responsive App Landing Page Design
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## Objective
+Create a responsive landing page for a mobile application using HTML and CSS, with Next.js as an optional but preferred framework. The design should be visually appealing, user-friendly, and optimized for both desktop and mobile devices.
 
 ## Technologies Used
 
