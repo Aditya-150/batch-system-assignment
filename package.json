@@ -9,6 +9,7 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
+		"@nextui-org/avatar": "^2.0.29",
 		"@nextui-org/button": "^2.0.32",
 		"@nextui-org/code": "^2.0.28",
 		"@nextui-org/input": "^2.2.0",
@@ -48,5 +49,8 @@
 		"tailwind-variants": "^0.1.20",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.0.4"
+	},
+	"devDependencies": {
+		"@svgr/webpack": "^8.1.0"
 	}
 }

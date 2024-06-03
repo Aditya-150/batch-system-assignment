@@ -1,56 +1,65 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
+import Image from "next/image";
 
-import { siteConfig } from "@/config/site";
+import heroImage from "../public/hero-image.webp";
+
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { PlayIcon } from "@/components/icons";
+import { RightArrowIcon, HeroImageMain } from "@/components/icons";
+import { Features } from "@/components/features";
+import { Advantages } from "@/components/advantages";
+import { Testimonial } from "@/components/testimonial";
+import { Faq } from "@/components/faq";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Make&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-        <br />
-        <h1 className={title()}>
-          websites regardless of your design experience.
-        </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </h2>
-      </div>
+    <>
+      <section className="flex flex-row justify-between items-center w-full relative">
+        <div className="flex flex-col items-center xl:items-start justify-center gap-4 py-8 md:py-10 w-full">
+          <div className="inline-block max-w-xl text-center xl:text-left justify-center xl:justify-start">
+            <h1 className={title({ size: "lg" })}>
+              Make The Best Financial Decisions
+            </h1>
+            <h2 className={subtitle({ class: "mt-4" })}>
+              Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+              faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
+            </h2>
+          </div>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
+          <div className="flex gap-3">
+            <Link
+              isExternal
+              className={buttonStyles({
+                class: "bg rounded-[4px] bg-black text-white text-lg py-6 ",
+              })}
+              href="/#"
+            >
+              Get Started
+              <RightArrowIcon />
+            </Link>
+            <Link
+              isExternal
+              className={buttonStyles({
+                class: "rounded-[4px] bg-transparent text-black text-lg py-6",
+              })}
+              href="https://www.youtube.com/watch?v=CKWnWeKvV2g"
+            >
+              <PlayIcon />
+              Watch Video
+            </Link>
+          </div>
 
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="flat">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div>
-    </section>
+          <Image alt="Hero Image" src={heroImage} />
+        </div>
+        <div className="xl:absolute xl:-right-48 xl:-top-28 xl:h-[60rem] sm:h-[30rem] hidden xl:flex object-contain">
+          <HeroImageMain />
+        </div>
+      </section>
+      <Features />
+      <Advantages />
+      <Testimonial />
+      <Faq />
+    </>
   );
 }
